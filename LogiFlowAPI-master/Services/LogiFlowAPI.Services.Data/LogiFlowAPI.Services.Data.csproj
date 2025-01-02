@@ -1,0 +1,32 @@
+﻿<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net8.0</TargetFramework>
+    <LangVersion>latest</LangVersion>
+  </PropertyGroup>
+
+  <PropertyGroup>
+    <CodeAnalysisRuleSet>..\..\Rules.ruleset</CodeAnalysisRuleSet>
+  </PropertyGroup>
+  <ItemGroup>
+    <AdditionalFiles Include="..\..\stylecop.json" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="StyleCop.Analyzers" Version="1.2.0-beta.435" PrivateAssets="all">
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\Data\LogiFlowAPI.Data.Common\LogiFlowAPI.Data.Common.csproj" />
+    <ProjectReference Include="..\..\Data\LogiFlowAPI.Data.Models\LogiFlowAPI.Data.Models.csproj" />
+    <ProjectReference Include="..\..\LogiFlowAPI.Common\LogiFlowAPI.Common.csproj" />
+    <ProjectReference Include="..\..\LogiFlowAPI.Services.Common\LogiFlowAPI.Services.Common.csproj" />
+    <ProjectReference Include="..\..\Web\LogiFlowAPI.Web.Models\LogiFlowAPI.Web.Models.csproj" />
+    <ProjectReference Include="..\LogiFlowAPI.Services.Mapping\LogiFlowAPI.Services.Mapping.csproj" />
+    <ProjectReference Include="..\LogiFlowAPI.Services.Messaging\LogiFlowAPI.Services.Messaging.csproj" />
+    <ProjectReference Include="..\LogiFlowAPI.Services\LogiFlowAPI.Services.csproj" />
+  </ItemGroup>
+
+</Project>
